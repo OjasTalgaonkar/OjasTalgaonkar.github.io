@@ -1,3 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
 body {
     background-image: linear-gradient(to bottom, #000000, #340722, #5a004e, #70008c, #5e28dc);
     font-family: "roboto", sans-serif;
@@ -11,7 +21,7 @@ body {
 
 .burger {
     position: absolute;
-    top: 20px;
+    top: 60px;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -56,12 +66,63 @@ body {
     transition: transform 500ms;
 }
 
+/* Options Bar */
+.OptionBar {
+    height: 60px;
+    background-color: #5a004e6c;
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    font-size: xx-large;
+    /* position: relative;
+    top: 5px; */
+}
+
+.home {
+    width: 10rem;
+    font-weight: bolder;
+    height: 50px;
+    padding-top: 5px;
+    color: white;
+}
+
+.rest {
+    width: 7rem;
+    font-weight: bold;
+    height: 50px;
+    padding-top: 5px;
+    color: white;
+}
+
+.code {
+    width: 12rem;
+    text-align: center;
+    justify-self: end;
+    color: rgb(0, 255, 0);
+    height: 50px;
+    padding-top: 5px;
+}
+
+.border:hover {
+    border: 2px solid rgba(255, 255, 255, 0.336);
+}
+
 #AboutMe {
     display: flex;
     /* flex-wrap: wrap; */
     position: relative;
     top: 10%;
     left: 30px;
+    margin: 30px;
+    background-image: inherit;
+}
+
+.textabout {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .image {
@@ -113,8 +174,18 @@ body {
 .uni {
     width: 200px;
     border: 2px solid white;
+    border-radius: 5px;
 }
 
 .uni:hover {
     border-color: black;
+}
+
+
+
+.blur:hover {
+    transform: scale(110%);
+    background-color: rgba(7, 89, 51, 0.783);
+    border-radius: 12px;
+    transition: all 0.2s ease-in;
 }
