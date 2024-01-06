@@ -1,0 +1,120 @@
+body {
+    background-image: linear-gradient(to bottom, #000000, #340722, #5a004e, #70008c, #5e28dc);
+    font-family: "roboto", sans-serif;
+
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.burger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    transition: all 700ms;
+    opacity: 0.90;
+}
+
+.burger:hover {
+    background-color: blueviolet;
+}
+
+.sidebar {
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    background: red;
+    z-index: 20;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 500ms, visibility 0ms 500ms;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.active {
+    visibility: visible;
+    transform: translateX(0%);
+    transition: transform 500ms;
+}
+
+#AboutMe {
+    display: flex;
+    /* flex-wrap: wrap; */
+    position: relative;
+    top: 10%;
+    left: 30px;
+}
+
+.image {
+    margin-right: 30px;
+    height: 70vh;
+    min-width: 300px;
+    background-image: url("Images/selfPhoto.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+}
+
+.contentbox {
+    justify-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: aliceblue;
+}
+
+.headline {
+    background: linear-gradient(45deg, rgb(0, 213, 255), rgb(255, 0, 17));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.text {
+    color: aliceblue;
+    font-size: large;
+}
+
+.head {
+    background: linear-gradient(45deg, rgb(0, 213, 255), rgb(255, 0, 17));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+
+.content {
+    flex-basis: auto;
+    margin-right: 10%;
+
+}
+
+.uni {
+    width: 200px;
+    border: 2px solid white;
+}
+
+.uni:hover {
+    border-color: black;
+}
