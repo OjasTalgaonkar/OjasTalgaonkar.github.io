@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -20,7 +22,7 @@ body {
 }
 
 .burger {
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: 20px;
     width: 50px;
@@ -47,7 +49,8 @@ body {
     left: 0px;
     width: 300px;
     height: 100%;
-    background: red;
+    background: rgba(0, 229, 255, 0.386);
+    backdrop-filter: blur(10px);
     z-index: 20;
     visibility: hidden;
     transform: translateX(-100%);
@@ -69,7 +72,8 @@ body {
 /* Options Bar */
 .OptionBar {
     height: 60px;
-    background-color: #5a004e6c;
+    background-color: #6b04fc1f;
+    font-family: "Exo 2", sans-serif;
     display: flex;
     color: rgb(255, 255, 255);
     justify-content: space-between;
@@ -102,6 +106,7 @@ body {
     width: 12rem;
     text-align: center;
     justify-self: end;
+    align-self: center;
     color: rgb(0, 255, 0);
     height: 50px;
     padding-top: 5px;
@@ -113,12 +118,20 @@ body {
 
 #AboutMe {
     display: flex;
-    /* flex-wrap: wrap; */
     position: relative;
     top: 10%;
     left: 30px;
     margin: 30px;
     background-image: inherit;
+}
+
+.About1 {
+    text-align: left;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.395);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .textabout {
@@ -166,7 +179,7 @@ body {
 
 
 .content {
-    flex-basis: auto;
+    /* flex-basis: content; */
     margin-right: 10%;
 
 }
@@ -188,4 +201,39 @@ body {
     background-color: rgba(7, 89, 51, 0.783);
     border-radius: 12px;
     transition: all 0.2s ease-in;
+}
+
+/* Website details */
+.headliner {
+    font-family: "Exo 2";
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-weight: 1000;
+}
+
+.projectContainer {
+    height: 40vh;
+    width: 90%;
+    display: flex;
+    background-color: #36353551;
+    border-radius: 5px;
+    align-items: center;
+
+}
+
+.projectTemplate {
+    height: 90%;
+    width: 10%;
+    text-align: left;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-size: cover;
+    background-color: aqua;
+    color: rgb(255, 0, 0);
+    margin: 10px;
+}
+
+.grow {
+    flex-grow: 1;
 }

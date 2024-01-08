@@ -20,8 +20,8 @@
       <h2>Menu</h2>
       <ul>
         <li><a href="#AboutMe">About Me</a></li>
-        <li><a href="#">Website details</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#WebDetails">Website details</a></li>
+        <li><a href="#Project">Projects</a></li>
         <li><a href="#">Footnotes</a></li>
       </ul>
     </div>
@@ -62,7 +62,7 @@
       <div class="image"></div>
 
       <div class="contentbox">
-        <div style="text-align: left; width: 100%">
+        <div class="About1">
           <span class="headline">About Me</span><br />
           <p class="textabout">
             Hello, my name is <b>Ojas Talgaonkar</b>. Although I am ethnically
@@ -77,9 +77,9 @@
         <div class="content blur">
           <span class="head">Skills</span><br />
           <pre class="text">
--Responsive Web Design
--HTML,CSS,Javascript,DOM
--Java, Python
+-Responsive Web Design          -Networking
+-HTML,CSS,Javascript,DOM        -Graphic Design
+-Java, Python                   -Arduino
 -Microsoft Excel
 -VScode,Eclipse, Git, Github
           </pre>
@@ -87,7 +87,6 @@
 
         <div class="content blur">
           <span class="head">Education</span><br />
-          <!-- <pre class="text">Purdue University</pre> -->
           <a href="https://www.purdue.edu/"
             ><img
               src="Images\purduelogo.png"
@@ -97,16 +96,40 @@
         </div>
 
         <div class="content blur">
-          <span class="head">Hobbies</span>
+          <span class="head">Interests</span>
           <pre class="text">
 -Coding
 -Art(Digital and traditional)
 -Music
 -Debating
+-Animated movies and Shows
           </pre>
         </div>
       </div>
     </div>
+
+    <!-- Website Details -->
+    <div>
+      <div class="headliner" id="WebDetails">Learn about this website</div>
+      <div class="details1">
+        <div>Technologies used</div>
+        <div>External Resources</div>
+        <div>Future Improvements</div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="Projects" id="Project">
+      <h2 class="headliner">My Projects</h2>
+      <div class="projectContainer">
+        <div class="projectTemplate" style="background-image: url("Images/AmazonProject.png");"> Box1 </div>
+        <div class="projectTemplate" class="grow">box2</div>
+        <div class="projectTemplate">box3</div>
+        <div class="projectTemplate">box4</div>
+        <div class="projectTemplate">box5</div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
