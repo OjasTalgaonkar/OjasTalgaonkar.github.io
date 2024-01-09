@@ -122,7 +122,7 @@ body {
     top: 10%;
     left: 30px;
     margin: 30px;
-    background-image: inherit;
+
 }
 
 .About1 {
@@ -140,7 +140,7 @@ body {
 
 .image {
     margin-right: 30px;
-    height: 70vh;
+    height: 400px;
     min-width: 300px;
     background-image: url("Images/selfPhoto.jpeg");
     background-size: cover;
@@ -212,14 +212,41 @@ body {
     font-weight: 1000;
 }
 
+.details1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detailBox {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 0, 255);
+    margin: 10px;
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+    background-color: #5e28dc;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+}
+
+/* Projects */
+
+
 .projectContainer {
     height: 40vh;
     width: 90%;
+    margin: 5%;
     display: flex;
     background-color: #36353551;
     border-radius: 5px;
     align-items: center;
-
+    align-self: center;
 }
 
 .projectTemplate {
@@ -232,8 +259,11 @@ body {
     background-color: aqua;
     color: rgb(255, 0, 0);
     margin: 10px;
+    font-size: 0;
 }
 
 .grow {
     flex-grow: 1;
+    font-size: large;
+
 }

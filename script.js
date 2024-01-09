@@ -9,3 +9,12 @@ document.querySelector("button").addEventListener("click",()=>{
         console.log("no");
     }
 });
+
+
+function expandDiv(clickedDiv){
+    let allDivs= document.querySelectorAll('.projectTemplate');
+    allDivs.forEach(function(div){
+        div.classList.remove('grow');
+    })
+    clickedDiv.classList.add('grow');
+}

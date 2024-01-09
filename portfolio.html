@@ -112,21 +112,24 @@
     <div>
       <div class="headliner" id="WebDetails">Learn about this website</div>
       <div class="details1">
-        <div>Technologies used</div>
-        <div>External Resources</div>
-        <div>Future Improvements</div>
+        <div class="detailBox">Technologies used</div>
+        <div class="detailBox">External Resources</div>
+        <div class="detailBox">Future Improvements</div>
       </div>
     </div>
 
     <!-- Projects -->
     <div class="Projects" id="Project">
       <h2 class="headliner">My Projects</h2>
+      <h3 style="text-align: center; color: white">
+        Click on the box to view project!
+      </h3>
       <div class="projectContainer">
-        <div class="projectTemplate" style="background-image: url("Images/AmazonProject.png");"> Box1 </div>
-        <div class="projectTemplate" class="grow">box2</div>
-        <div class="projectTemplate">box3</div>
-        <div class="projectTemplate">box4</div>
-        <div class="projectTemplate">box5</div>
+        <div class="projectTemplate grow" onclick="expandDiv(this)">Box1</div>
+        <div class="projectTemplate" onclick="expandDiv(this)">box2</div>
+        <div class="projectTemplate" onclick="expandDiv(this)">box3</div>
+        <div class="projectTemplate" onclick="expandDiv(this)">box4</div>
+        <div class="projectTemplate" onclick="expandDiv(this)">box5</div>
       </div>
     </div>
 
