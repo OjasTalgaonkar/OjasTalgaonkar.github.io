@@ -247,23 +247,47 @@ body {
     border-radius: 5px;
     align-items: center;
     align-self: center;
+    flex-direction: row;
 }
 
 .projectTemplate {
     height: 90%;
     width: 10%;
+    color: white;
     text-align: left;
+    display: flex;
+    align-items: center;
     border-radius: 5px;
     border: 2px solid white;
     background-size: cover;
     background-color: aqua;
-    color: rgb(255, 0, 0);
     margin: 10px;
     font-size: 0;
+    filter: grayscale(70%);
+
+}
+
+.projectTemplate::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.658));
+    z-index: 2;
+}
+
+.Ptext {
+    z-index: 5;
 }
 
 .grow {
     flex-grow: 1;
     font-size: large;
 
+}
+
+#project1 {
+    background-image: url("Images/AmazonProject.png");
 }
