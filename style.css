@@ -291,3 +291,8 @@ body {
 #project1 {
     background-image: url("Images/AmazonProject.png");
 }
+
+.extendDetai {
+    height: 100vh;
+
+}
