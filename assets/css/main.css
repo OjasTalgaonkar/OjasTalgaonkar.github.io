@@ -173,7 +173,7 @@ html {
 }
 
 body {
-	background: #000038;
+	background: #0a0a17;
 	color: #ffffff;
 	font-size: 15pt;
 	line-height: 1.85em;
@@ -209,7 +209,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 400;
+	font-weight: 500;
 	color: #00f2ff;
 	line-height: 1.25em;
 	font-family: 'Century Gothic';
@@ -1928,10 +1928,11 @@ footer {
 }
 
 #resume {
-	background-image: url("../../images/SunGoesDown.png");
+	/* background-image: url("../../images/SunGoesDown.png");
 	background-attachment: ;
 	background-size: cover;
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px); */
+	background-color: #0a0a17;
 }
 
 .r-container {
@@ -2338,7 +2339,7 @@ header .icon.circled {
 /* Wrapper */
 
 .wrapper {
-	background: #000038;
+	background: #0a0a17;
 	margin: 0 0 2em 0;
 	padding: 6em 0 6em 0;
 }
@@ -2589,7 +2590,7 @@ body.homepage.is-preload #header:after {
 /* Banner */
 
 #banner {
-	background: #000038;
+	background: #0a0a17;
 	text-align: center;
 	padding: 4.5em 0 4.5em 0;
 	margin-bottom: 0;
