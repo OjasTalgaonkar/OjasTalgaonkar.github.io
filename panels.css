@@ -1,0 +1,224 @@
+/* ============================================================
+   PANELS.CSS — SLIDING PANEL SYSTEM
+   Each panel slides in from a different direction
+   ============================================================ */
+
+/* ── BASE PANEL ── */
+.panel {
+  position: fixed; inset: 0;
+  z-index: 50;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--black);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity   0.35s ease;
+  will-change: transform;
+  pointer-events: none;
+}
+.panel.active {
+  pointer-events: all;
+}
+
+/* ── SLIDE DIRECTIONS ── */
+.panel[data-from="left"]   { transform: translateX(-100vw);  opacity: 1; }
+.panel[data-from="right"]  { transform: translateX(100vw);   opacity: 1; }
+.panel[data-from="top"]    { transform: translateY(-100vh);  opacity: 1; }
+.panel[data-from="bottom"] { transform: translateY(100vh);   opacity: 1; }
+
+.panel.active {
+  transform: translate(0, 0) !important;
+}
+
+/* Closing: reverse + fade */
+.panel.closing[data-from="left"]   { transform: translateX(-100vw); opacity: 0; }
+.panel.closing[data-from="right"]  { transform: translateX(100vw);  opacity: 0; }
+.panel.closing[data-from="top"]    { transform: translateY(-100vh); opacity: 0; }
+.panel.closing[data-from="bottom"] { transform: translateY(100vh);  opacity: 0; }
+
+/* ── CLOSE BUTTON ── */
+.panel-close {
+  position: fixed;
+  top: 24px; right: 30px;
+  z-index: 200;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+  background: none;
+  border: 1px solid rgba(200,16,46,0.3);
+  padding: 8px 20px;
+  transition: all 0.2s;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+  display: flex; align-items: center; gap: 10px;
+}
+.panel-close:hover {
+  border-color: var(--red);
+  color: var(--off-white);
+  background: rgba(200,16,46,0.1);
+}
+.panel-close .close-key {
+  font-size: 0.65rem;
+  opacity: 0.5;
+  border: 1px solid currentColor;
+  padding: 1px 5px;
+}
+
+/* ── PANEL CONTENT WRAPPER ── */
+.panel-inner {
+  min-height: 100%;
+  position: relative;
+}
+
+/* ── PANEL TOP BAR ── */
+.panel-topbar {
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background: var(--black);
+  border-bottom: 2px solid var(--red);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 100;
+  gap: 20px;
+}
+.panel-topbar::before {
+  content: '▶';
+  color: var(--red);
+  font-size: 0.7rem;
+}
+.panel-topbar-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.25em;
+  color: var(--off-white);
+}
+.panel-topbar-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-left: auto;
+  margin-right: 120px; /* space for close btn */
+}
+
+/* ── PANEL SECTION HEADER ── */
+.panel-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 8vw, 9rem);
+  line-height: 0.85;
+  position: relative;
+  display: inline-block;
+}
+.panel-section-bg-text {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 22rem);
+  color: rgba(200,16,46,0.05);
+  white-space: nowrap;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* ── REVEAL ON SCROLL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.from-left  { transform: translateX(-40px); }
+.reveal.from-right { transform: translateX(40px); }
+.reveal.visible    { opacity: 1; transform: translate(0); }
+
+/* ── CARDS ── */
+.card {
+  background: rgba(200,16,46,0.05);
+  border: 1px solid rgba(200,16,46,0.2);
+  border-left: 3px solid var(--red);
+  padding: 32px;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  transition: background 0.2s, border-color 0.2s;
+  position: relative;
+}
+.card:hover {
+  background: rgba(200,16,46,0.1);
+  border-color: rgba(200,16,46,0.5);
+}
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; right: -5px;
+  width: 100%; height: 100%;
+  background: rgba(200,16,46,0.08);
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+/* ── IMAGE PLACEHOLDER ── */
+.img-slot {
+  background: rgba(200,16,46,0.05);
+  border: 2px dashed rgba(200,16,46,0.3);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 12px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.img-slot:hover { border-color: var(--red); }
+.img-slot .slot-label {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: rgba(200,16,46,0.5);
+  letter-spacing: 0.2em;
+}
+.img-slot .slot-dim {
+  font-size: 0.6rem;
+  opacity: 0.5;
+}
+.img-slot::before {
+  content: '// IMAGE ASSET';
+  position: absolute;
+  top: 10px; left: 16px;
+  font-size: 0.6rem;
+  color: var(--red);
+  opacity: 0.4;
+  letter-spacing: 0.2em;
+}
+/* When you add actual images: replace .img-slot with an <img> tag */
+/* Example: <img src="./assets/your-image.jpg" alt="..." class="img-actual"> */
+.img-actual {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── HORIZONTAL RULE ── */
+.h-rule {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--red), transparent);
+  margin: 40px 0;
+}
+.h-rule.full { background: linear-gradient(to right, transparent, var(--red), transparent); }
+
+/* ── TAG PILL ── */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: var(--red);
+  border: 1px solid rgba(200,16,46,0.4);
+  padding: 3px 10px;
+  clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+}

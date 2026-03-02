@@ -1,457 +1,750 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OJAS TALGAONKAR // PORTFOLIO</title>
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="hub.css">
+<link rel="stylesheet" href="panels.css">
+</head>
+<body>
 
-<html>
-  <head>
-    <title>Ojas Talgaonkar</title>
-    <link rel="icon" href="images/favicon.png" type="image/png" />
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-  </head>
-  <body class="homepage is-preload">
-    <div id="page-wrapper">
-      <!-- Header -->
-      <div id="header">
-        <!-- Inner -->
-        <div class="inner">
-          <header>
-            <h1><a href="index.html" id="logo">Hi, I'm Ojas</a></h1>
-            <hr />
-            <p>
-              I like to build cool things so that I can name it something cool
-            </p>
-          </header>
-          <footer>
-            <a href="#banner" class="button circled scrolly">Start</a>
-          </footer>
-        </div>
+<!-- CURSOR -->
+<div id="cursor-dot"  class="cursor-dot"></div>
+<div id="cursor-ring" class="cursor-ring"></div>
 
-        <!-- Nav -->
-        <nav id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-              <a href="#">Socials</a>
-              <ul>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/ojas-talgaonkar-0b6251264/"
-                    >Linkedin</a
-                  >
-                </li>
-                <li><a href="https://github.com/OjasTalgaonkar">Github</a></li>
-                <li>
-                  <a
-                    href="https://open.spotify.com/user/hulxnovufwh86b9ckfe3l9xnf?si=6dd3c2c86aee4f85"
-                    >Spotify</a
-                  >
-                </li>
-                <!-- <li>
-                  <a href="#">And a submenu &hellip;</a>
-                  <ul>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Phasellus consequat</a></li>
-                    <li><a href="#">Magna phasellus</a></li>
-                    <li><a href="#">Etiam dolore nisl</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Veroeros feugiat</a></li> -->
-              </ul>
-            </li>
-            <li><a href="#projects">Coding Projects</a></li>
-            <li><a href="#Experience">Work Experience</a></li>
-            <li><a href="#resume">My Resume</a></li>
-            <li><a href="#art">My Art</a></li>
-          </ul>
-        </nav>
-      </div>
+<!-- NOISE + SCANLINES -->
+<div class="noise"></div>
+<div class="scanlines"></div>
 
-      <!-- Banner -->
-      <section id="banner">
-        <header>
-          <h2>About<strong> Me</strong>.</h2>
-          <p>
-            I'm a programmer and an artist, with a passion for creating cool
-            things. I'm from Cleveland, OH and am currently studying Computer
-            Science at
-            <a href="https://www.purdue.edu/"> Purdue University</a>.
-            <a href="http://html5up.net/license"></a>
-          </p>
-        </header>
-      </section>
+<!-- ================================================================
+     PANEL: ABOUT (slides from LEFT)
+     ================================================================ -->
+<div id="panel-about" class="panel" data-from="left">
+  <div class="panel-inner">
 
-      <!-- Carousel -->
-      <section class="carousel" id="projects">
-        <header>
-          <h2 style="text-align: center">Check Out My Coding Projects</h2>
-        </header>
-        <div class="reel">
-          <article>
-            <a
-              href="https://github.com/OjasTalgaonkar/FrameSnap"
-              class="image featured"
-              ><img src="images/IntroPage.png" alt=""
-            /></a>
-            <header>
-              <h3>
-                <a href="https://github.com/OjasTalgaonkar/FrameSnap"
-                  >FrameSnap</a
-                >
-              </h3>
-            </header>
-            <p>
-              A simple customizable retro themed image organizer and comes with
-              its own inbuilt CLI
-            </p>
-          </article>
+    <div class="panel-topbar">
+      <span class="panel-topbar-title">PERSONA // ABOUT</span>
+      <span class="panel-topbar-sub">WHO AM I</span>
+    </div>
+    <button class="panel-close" onclick="closePanel('about')">
+      CLOSE <span class="close-key">ESC</span>
+    </button>
 
-          <article>
-            <a
-              href="https://github.com/kneorain/helix-lang"
-              class="image featured"
-              ><img src="images/helix.png" alt=""
-            /></a>
-            <header>
-              <h3>
-                <a href="https://github.com/kneorain/helix-lang"
-                  >Helix-lang <i>(Co-developer)</i></a
-                >
-              </h3>
-            </header>
-            <p>
-              An upcoming high performance programming language that seamlessly
-              interops with C, C++, Rust and Python
-            </p>
-          </article>
+    <div style="padding: 60px 80px 120px; max-width: 1400px; margin: 0 auto; position: relative;">
+      <div class="panel-section-bg-text">SELF</div>
 
-          <article>
-            <a
-              href="https://github.com/OjasTalgaonkar/P2P-Network"
-              class="image featured"
-              ><img src="images/network.png" alt="" class="full-width-image"
-            /></a>
-            <header>
-              <h3>
-                <a href="https://github.com/OjasTalgaonkar/P2P-Network"
-                  >P2P Network</a
-                >
-              </h3>
-            </header>
-            <p>
-              A virtual Peer to Peer(P2P) decentralized network with its own
-              blockchain.
-            </p>
-          </article>
-
-          <article>
-            <a
-              href="https://github.com/OjasTalgaonkar/LC3-VirtualMachine"
-              class="image featured"
-              ><img src="images/vm.png" alt=""
-            /></a>
-            <header>
-              <h3>
-                <a href="https://github.com/OjasTalgaonkar/LC3-VirtualMachine"
-                  >LC3 virtual Machine</a
-                >
-              </h3>
-            </header>
-            <p>
-              An LC-3 virtual computer built in C, complete with memory,
-              registers and an instruction set.
-            </p>
-          </article>
-
-          <article>
-            <a
-              href="https://github.com/OjasTalgaonkar/ImpactFrames"
-              class="image featured"
-              ><img src="images/impact.png" alt=""
-            /></a>
-            <header>
-              <h3>
-                <a href="https://github.com/OjasTalgaonkar/ImpactFrames"
-                  >ImpactFrames</a
-                >
-              </h3>
-            </header>
-            <p>
-              An ongoing project that uses an ML model to edit frames from
-              videos into impact frames.
-            </p>
-          </article>
-
-          <!-- <article>
-            <a href="#" class="image featured"
-              ><img src="images/pic01.jpg" alt=""
-            /></a>
-            <header>
-              <h3><a href="#">Pulvinar sagittis congue</a></h3>
-            </header>
-            <p>
-              Commodo id natoque malesuada sollicitudin elit suscipit magna.
-            </p>
-          </article>
-
-          <article>
-            <a href="#" class="image featured"
-              ><img src="images/pic02.jpg" alt=""
-            /></a>
-            <header>
-              <h3><a href="#">Fermentum sagittis proin</a></h3>
-            </header>
-            <p>
-              Commodo id natoque malesuada sollicitudin elit suscipit magna.
-            </p>
-          </article>
-
-          <article>
-            <a href="#" class="image featured"
-              ><img src="images/pic03.jpg" alt=""
-            /></a>
-            <header>
-              <h3><a href="#">Sed quis rhoncus placerat</a></h3>
-            </header>
-            <p>
-              Commodo id natoque malesuada sollicitudin elit suscipit magna.
-            </p>
-          </article>
-
-          <article>
-            <a href="#" class="image featured"
-              ><img src="images/pic04.jpg" alt=""
-            /></a>
-            <header>
-              <h3><a href="#">Ultrices urna sit lobortis</a></h3>
-            </header>
-            <p>
-              Commodo id natoque malesuada sollicitudin elit suscipit magna.
-            </p>
-          </article>
-
-          <article>
-            <a href="#" class="image featured"
-              ><img src="images/pic05.jpg" alt=""
-            /></a>
-            <header>
-              <h3><a href="#">Varius magnis sollicitudin</a></h3>
-            </header>
-            <p>
-              Commodo id natoque malesuada sollicitudin elit suscipit magna.
-            </p>
-          </article> -->
-        </div>
-      </section>
-
-      <!-- Work experience -->
-      <div class="wrapper style1">
-        <section id="Experience" class="container special">
-          <header>
-            <h2>My Work Experience</h2>
-          </header>
-          <div class="row">
-            <article class="col-4 col-12-mobile special">
-              <a href="" class="image featured"
-                ><img src="images/headstarter.png" alt=""
-              /></a>
-              <header>
-                <h3>
-                  <a href="">SWE Fellow at <i>Headstarter.co</i></a>
-                </h3>
-                <h4>July 2024-present</h4>
-              </header>
-              <p>
-                -Participating in a 10 week Fellowship at Headstarter <br />
-                -Under the guidance of professional tech employees, I will be
-                building 6 Projects <br />
-                -Will be collaborating with a team of SWE fellows to participate
-                in hackathons
-              </p>
-            </article>
-            <article class="col-4 col-12-mobile special">
-              <a href="#" class="image featured"
-                ><img src="images/toth.png" alt=""
-              /></a>
-              <header>
-                <h3>
-                  <a href="#"
-                    >Game Programmer at <i>Hollow Interactive Studios</i></a
-                  >
-                </h3>
-                <h4>January 2024-present</h4>
-              </header>
-              <p>
-                -Engineered the main actions for characters in an upcoming
-                mature action adventure game <br />
-                -Worked with a team of developers to create and program mythical
-                creature animation/behavior in the game via procedural animation
-                <br />
-                -Crafted game features like dodge system
-              </p>
-            </article>
-            <article class="col-4 col-12-mobile special">
-              <a href="#" class="image featured"
-                ><img src="images/arcadia.png" alt=""
-              /></a>
-              <header>
-                <h3>
-                  <a href="#"
-                    >Data Analyst Intern at <i>Arcadia University</i></a
-                  >
-                </h3>
-                <h4>November 2022-January 2023</h4>
-              </header>
-              <p>
-                -Helped organize, process, and analyze behavioral data from a
-                project investigating the effects of intensive therapy camp on
-                stroke recovery on over 364 test subjects. <br />
-                -I was tasked with sorting data using any preferable methods, so
-                I developed a python program to take the contents of an excel
-                sheet using openpyxl library and sort/analyze them <br />
-              </p>
-            </article>
-          </div>
-        </section>
-      </div>
-
-      <!-- Resume -->
-
-      <div id="resume" style="text-align: center">
-        <h2 style="text-align: center">My Resume</h2>
-        <div class="r-container"></div>
-
-        <button
-          href="assets/Resume4.2.pdf"
-          download="Ojas_Talgaonkar_Resume.pdf"
-          class="download-btn"
-        >
-          Download Resume
-        </button>
-      </div>
-
-      <!-- Art -->
-
-      <div id="art" style="text-align: center">
-        <h2 style="text-align: center; margin: 50px 20px">Check Out My Art</h2>
-
-        <div class="rows">
-          <div class="columns">
-            <img src="images/1.png" />
-            <img src="images/2.png" />
-            <img src="images/3.png" />
-            <img src="images/4.png" />
-            <img src="images/5.png" />
-            <img src="images/6.png" />
-            <img src="images/7.png" />
-          </div>
-          <div class="columns">
-            <img src="images/8.png" />
-            <img src="images/9.png" />
-            <img src="images/10.png" />
-            <img src="images/11.png" />
-            <img src="images/12.png" />
-            <img src="images/13.png" />
-            <img src="images/14.png" />
-            <img src="images/30.png" />
-          </div>
-          <div class="columns">
-            <img src="images/15.png" />
-            <img src="images/16.png" />
-            <img src="images/17.png" />
-            <img src="images/18.png" />
-            <img src="images/19.png" />
-            <img src="images/20.png" />
-            <img src="images/21.png" />
-            <img src="images/29.png" />
-          </div>
-          <div class="columns">
-            <img src="images/22.png" />
-            <img src="images/23.png" />
-            <img src="images/24.png" />
-            <img src="images/25.png" />
-            <img src="images/26.png" />
-            <img src="images/27.png" />
-            <img src="images/28.png" />
-          </div>
+      <!-- TITLE -->
+      <div class="reveal" style="margin-bottom: 60px; position: relative; z-index: 1;">
+        <div style="font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.3em;color:var(--red);margin-bottom:14px;">01 // DOSSIER</div>
+        <div class="panel-section-title">
+          THE<br>
+          <span class="t-outline">ENGI</span><span class="t-red">NEER</span>
         </div>
       </div>
 
-      <!-- Footer -->
-      <div id="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <!-- Contact -->
+      <!-- GRID: text + image -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; position: relative; z-index: 1;">
 
-              <section class="contact">
-                <img
-                  src="images/favicon.png"
-                  alt="icon"
-                  height="130px"
-                  width="130px"
-                />
-                <header>
-                  <h3>Contacts</h3>
-                </header>
-                <p>Email: talgo01@pfw.edu | Mobile number: (260)402-1171</p>
-                <ul class="icons">
-                  <li>
-                    <a
-                      href="https://github.com/OjasTalgaonkar"
-                      class="icon brands fa-github"
-                      ><span class="label">Instagram</span></a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://open.spotify.com/user/hulxnovufwh86b9ckfe3l9xnf?si=927aee0f72414f57"
-                      class="icon brands fa-spotify"
-                      ><span class="label">Pinterest</span></a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.behance.net/ojastalgaonkar"
-                      class="icon brands fa-behance"
-                      ><span class="label">Dribbble</span></a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/ojas-talgaonkar-0b6251264/"
-                      class="icon brands fa-linkedin-in"
-                      ><span class="label">Linkedin</span></a
-                    >
-                  </li>
-                </ul>
-              </section>
+        <div>
+          <div class="card reveal">
+            <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.25em;color:var(--red);margin-bottom:18px;">// TECHNICAL IDENTITY</div>
+            <p style="font-size:1.05rem;font-weight:300;line-height:1.9;color:rgba(232,228,213,0.85);">
+              Systems-focused engineer specializing in high-performance and scalable applications.
+              I gravitate toward the machine itself — compiler internals, network stacks, memory tracking,
+              language semantics. The silent mathematics underneath every abstraction.
+            </p>
+            <div class="h-rule" style="margin: 28px 0;"></div>
+            <p style="font-size:1.05rem;font-weight:300;line-height:1.9;color:rgba(232,228,213,0.85);">
+              Co-founder of Helix Software Foundation. Building a language targeting LLVM from first principles.
+              I understand tools by understanding what they replace — then building them myself.
+            </p>
+          </div>
 
-              <!-- Copyright -->
-              <div class="copyright">
-                <ul class="menu">
-                  <li>&copy; Untitled. All rights reserved.</li>
-                </ul>
+          <div class="h-rule full" style="margin:40px 0;"></div>
+
+          <!-- STAT BARS -->
+          <div class="reveal" style="transition-delay:0.1s;">
+            <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.25em;color:var(--red);margin-bottom:20px;">// STATUS PARAMETERS</div>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div class="stat-row">
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                  <span style="font-family:var(--font-display);font-size:1rem;letter-spacing:0.15em;">C++ / SYSTEMS</span>
+                  <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--red);">98</span>
+                </div>
+                <div style="height:3px;background:rgba(200,16,46,0.15);"><div style="height:100%;width:98%;background:var(--red);"></div></div>
+              </div>
+              <div class="stat-row">
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                  <span style="font-family:var(--font-display);font-size:1rem;letter-spacing:0.15em;">NETWORKING / GO</span>
+                  <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--red);">93</span>
+                </div>
+                <div style="height:3px;background:rgba(200,16,46,0.15);"><div style="height:100%;width:93%;background:var(--red);"></div></div>
+              </div>
+              <div class="stat-row">
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                  <span style="font-family:var(--font-display);font-size:1rem;letter-spacing:0.15em;">COMPILER / LLVM</span>
+                  <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--red);">88</span>
+                </div>
+                <div style="height:3px;background:rgba(200,16,46,0.15);"><div style="height:100%;width:88%;background:var(--red);"></div></div>
+              </div>
+              <div class="stat-row">
+                <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                  <span style="font-family:var(--font-display);font-size:1rem;letter-spacing:0.15em;">COMPETITIVE PROG</span>
+                  <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--red);">TOP 5%</span>
+                </div>
+                <div style="height:3px;background:rgba(200,16,46,0.15);"><div style="height:100%;width:95%;background:var(--red);"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EXPERIENCE -->
+          <div class="h-rule full" style="margin:40px 0;"></div>
+          <div class="reveal" style="transition-delay:0.15s;">
+            <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.25em;color:var(--red);margin-bottom:20px;">// FIELD RECORD</div>
+            <div style="display:flex;flex-direction:column;gap:18px;">
+              <div style="border-left:3px solid var(--red);padding-left:16px;">
+                <div style="font-family:var(--font-display);font-size:1.2rem;letter-spacing:0.08em;">HELIX SOFTWARE FOUNDATION</div>
+                <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--red);margin:4px 0;">CO-FOUNDER / FOUNDING ENGINEER // JUN 2024 – PRESENT</div>
+                <p style="font-size:0.85rem;font-weight:300;line-height:1.7;color:var(--muted);">Core compiler & runtime targeting LLVM. Performance, memory tracking, language semantics. 600+ weekly visitors.</p>
+              </div>
+              <div style="border-left:3px solid rgba(200,16,46,0.4);padding-left:16px;">
+                <div style="font-family:var(--font-display);font-size:1.2rem;letter-spacing:0.08em;">HOLLOW INTERACTIVE STUDIOS</div>
+                <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--red);margin:4px 0;">GAME PROGRAMMER / TECH ANIMATOR // DEC 2023 – DEC 2024</div>
+                <p style="font-size:0.85rem;font-weight:300;line-height:1.7;color:var(--muted);">Procedural animation & behavior for mythical creatures. 10% perf gain. Collision-based hit detection & dodge systems.</p>
+              </div>
+              <div style="border-left:3px solid rgba(200,16,46,0.2);padding-left:16px;">
+                <div style="font-family:var(--font-display);font-size:1.2rem;letter-spacing:0.08em;">ARCADIA UNIVERSITY — PHYS THERAPY</div>
+                <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--red);margin:4px 0;">DATA ANALYST INTERN // NOV 2022 – JAN 2023</div>
+                <p style="font-size:0.85rem;font-weight:300;line-height:1.7;color:var(--muted);">Behavioral data analysis from 364+ subjects studying intensive therapy effects on stroke recovery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div style="display:flex;flex-direction:column;gap:40px;">
+
+          <!-- IMAGE SLOT: Portrait / Artist Photo -->
+          <div class="img-slot reveal" style="height:380px;transition-delay:0.15s;">
+            <div class="slot-label">PORTRAIT</div>
+            <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);text-align:center;padding:0 20px;line-height:1.8;">
+              Replace with: &lt;img src="./assets/portrait.jpg"&gt;<br>
+              Suggested: atmospheric, high contrast, face in shadow or partial
+            </div>
+            <div class="slot-dim">Recommended: 600×750px</div>
+          </div>
+          <!-- /IMAGE SLOT -->
+
+          <!-- Artistic persona card -->
+          <div class="card reveal" style="transition-delay:0.2s;">
+            <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.25em;color:var(--red);margin-bottom:18px;">// ARTISTIC PERSONA</div>
+            <p style="font-size:1.05rem;font-weight:300;line-height:1.9;color:rgba(232,228,213,0.85);">
+              The work I make as an artist occupies a different register — cold, atmospheric, introspective.
+              Scale, isolation, time. The Antarctic emptiness. Deep ocean weight. Distant futures where humanity is small and the cosmos is indifferent.
+            </p>
+            <div style="margin-top:20px;display:flex;gap:8px;flex-wrap:wrap;">
+              <span class="tag">SCALE</span>
+              <span class="tag">ISOLATION</span>
+              <span class="tag">LEGACY</span>
+              <span class="tag">SURREAL</span>
+              <span class="tag">COSMIC WEIGHT</span>
+            </div>
+          </div>
+
+          <!-- Awards -->
+          <div class="card reveal" style="transition-delay:0.25s;">
+            <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.25em;color:var(--red);margin-bottom:18px;">// CITATIONS &amp; AWARDS</div>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div>
+                <div style="font-family:var(--font-display);font-size:1.1rem;letter-spacing:0.08em;">NATIONAL CYBER LEAGUE</div>
+                <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);margin-top:4px;line-height:1.7;">Top 5% nationally — Team Game (×3) · Top 10% — Individual (×3)<br>OSINT · Cryptography · Web Exploitation · Digital Forensics</div>
+              </div>
+              <div style="height:1px;background:rgba(200,16,46,0.15);"></div>
+              <div>
+                <div style="font-family:var(--font-display);font-size:1.1rem;letter-spacing:0.08em;">IEEEXTREME 18.0</div>
+                <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);margin-top:4px;line-height:1.7;">Ranked 33rd in the country · Competitive Programming</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- BOTTOM INFO ROW -->
+      <div class="h-rule full" style="margin:80px 0 60px;"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;position:relative;z-index:1;">
+
+        <div class="card reveal" style="transition-delay:0s;">
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--red);margin-bottom:12px;letter-spacing:0.2em;">// CODENAME</div>
+          <div style="font-family:var(--font-display);font-size:2.5rem;letter-spacing:0.1em;line-height:1;">OJAS TALGAONKAR</div>
+          <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);margin-top:10px;line-height:1.7;">ojastalgaonkar.github.io</div>
+        </div>
+
+        <div class="card reveal" style="transition-delay:0.1s;">
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--red);margin-bottom:12px;letter-spacing:0.2em;">// BASE OF OPERATIONS</div>
+          <div style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;line-height:1.4;">FORT WAYNE<br>INDIANA, USA</div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);margin-top:10px;">Purdue University · CS Honors · GPA 3.6 · Dean's List · Expected May 2027</div>
+        </div>
+
+        <div class="card reveal" style="transition-delay:0.2s;">
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--red);margin-bottom:12px;letter-spacing:0.2em;">// CURRENT STATUS</div>
+          <div style="font-family:var(--font-display);font-size:1.1rem;letter-spacing:0.08em;line-height:1.6;">OPEN TO<br>COLLABORATION<br><span style="color:var(--red);">SYSTEMS / ART</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     PANEL: WORK (slides from RIGHT)
+     ================================================================ -->
+<div id="panel-work" class="panel" data-from="right">
+  <div class="panel-inner">
+
+    <div class="panel-topbar">
+      <span class="panel-topbar-title">HEIST LOG // WORK</span>
+      <span class="panel-topbar-sub">SELECTED PROJECTS</span>
+    </div>
+    <button class="panel-close" onclick="closePanel('work')">
+      CLOSE <span class="close-key">ESC</span>
+    </button>
+
+    <div style="padding: 60px 80px 120px; max-width: 1400px; margin: 0 auto; position: relative;">
+      <div class="panel-section-bg-text">WORK</div>
+
+      <div class="reveal" style="margin-bottom: 60px; position: relative; z-index: 1;">
+        <div style="font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.3em;color:var(--red);margin-bottom:14px;">02 // HEIST LOG</div>
+        <div class="panel-section-title">
+          <span class="t-outline">SE</span><span class="t-red">LE</span>CTED<br>WORK
+        </div>
+      </div>
+
+      <!-- PROJECT CARDS — asymmetric grid -->
+      <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:20px;position:relative;z-index:1;">
+
+        <!-- FEATURED: PseudoNet -->
+        <div class="card reveal" style="grid-column:1/8;transition-delay:0.05s;padding:0;overflow:hidden;">
+          <div class="img-slot" style="height:280px;">
+            <div class="slot-label">PSEUDONET // VISUAL</div>
+            <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);padding:0 30px;text-align:center;line-height:1.8;">
+              &lt;img src="./assets/pseudonet.jpg"&gt;<br>
+              Architecture diagram, packet flow, or network topology render
+            </div>
+            <div class="slot-dim">1200×600px</div>
+          </div>
+          <div style="padding:28px 32px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+              <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);">01 // SYSTEMS</div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;">
+                <span class="tag">GO</span><span class="tag">C++</span><span class="tag">NETWORKING</span><span class="tag">BASH</span>
+              </div>
+            </div>
+            <div style="font-family:var(--font-display);font-size:2.2rem;letter-spacing:0.06em;margin-bottom:10px;">PSEUDONET</div>
+            <p style="font-size:0.9rem;font-weight:300;line-height:1.8;color:var(--muted);">A network stack built from scratch in Go — TCP/UDP communication, custom chat and reliable protocols, an HTTP server, packet sniffer, DNS client, and full-layer integration. Zero abstractions that weren't written by hand.</p>
+            <a href="https://github.com/OjasTalgaonkar" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:var(--font-display);font-size:0.9rem;letter-spacing:0.2em;color:var(--red);border-bottom:1px solid var(--red);padding-bottom:2px;">
+              VIEW PROJECT ▶
+            </a>
+          </div>
+        </div>
+
+        <!-- Helix-lang -->
+        <div class="card reveal" style="grid-column:8/13;transition-delay:0.1s;">
+          <div class="img-slot" style="height:180px;margin-bottom:20px;">
+            <div class="slot-label">HELIX-LANG</div>
+            <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);text-align:center;padding:0 10px;line-height:1.8;">
+              &lt;img src="./assets/helix.jpg"&gt;<br>Syntax sample, compiler diagram
+            </div>
+            <div class="slot-dim">600×360px</div>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);margin-bottom:10px;">02 // COMPILER / LANG</div>
+          <div style="font-family:var(--font-display);font-size:1.6rem;letter-spacing:0.06em;margin-bottom:10px;">HELIX-LANG</div>
+          <p style="font-size:0.85rem;font-weight:300;line-height:1.7;color:var(--muted);">High-performance general-purpose language. Readability-first syntax, no performance compromise. Interop with Rust, Python, C++. LLVM backend. 15+ new users/week.</p>
+          <div style="margin-top:16px;display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="tag">PYTHON</span><span class="tag">C++</span><span class="tag">RUST</span><span class="tag">LLVM</span>
+          </div>
+        </div>
+
+        <!-- Letter-map Compression -->
+        <div class="card reveal" style="grid-column:1/5;transition-delay:0.15s;">
+          <div class="img-slot" style="height:160px;margin-bottom:20px;">
+            <div class="slot-label">COMPRESSION</div>
+            <div class="slot-dim">600×320px</div>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);margin-bottom:10px;">03 // ALGORITHMS</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;letter-spacing:0.06em;margin-bottom:8px;">LETTER-MAP COMPRESSION</div>
+          <p style="font-size:0.82rem;font-weight:300;line-height:1.7;color:var(--muted);">Custom text compression via frequency-based letter remapping. Up to 50% compression on benchmark files.</p>
+          <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="tag">C++</span><span class="tag">BASH</span>
+          </div>
+        </div>
+
+        <!-- Edge donation system -->
+        <div class="card reveal" style="grid-column:5/9;transition-delay:0.2s;">
+          <div class="img-slot" style="height:160px;margin-bottom:20px;">
+            <div class="slot-label">EDGE SYSTEM</div>
+            <div class="slot-dim">600×320px</div>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);margin-bottom:10px;">04 // DISTRIBUTED</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;letter-spacing:0.06em;margin-bottom:8px;">EDGE DONATION SYSTEM</div>
+          <p style="font-size:0.82rem;font-weight:300;line-height:1.7;color:var(--muted);">Edge-distributed donation system with idempotent transactions and eventual consistency. $6/month operating cost, global latency maintained.</p>
+        </div>
+
+        <!-- File search + Art slot -->
+        <div class="card reveal" style="grid-column:9/13;transition-delay:0.25s;">
+          <div class="img-slot" style="height:160px;margin-bottom:20px;">
+            <div class="slot-label">FILE SEARCH / ART</div>
+            <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);padding:0 10px;text-align:center;line-height:1.8;">
+              &lt;img src="./assets/art-piece.jpg"&gt;
+            </div>
+            <div class="slot-dim">600×320px</div>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);margin-bottom:10px;">05 // PERF / ART</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;letter-spacing:0.06em;margin-bottom:8px;">FAST FILE SEARCH</div>
+          <p style="font-size:0.82rem;font-weight:300;line-height:1.7;color:var(--muted);">Cross-platform multithreaded file search. Outperforms Windows Explorer by ~300%.</p>
+          <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="tag">C++</span><span class="tag">MULTITHREADED</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     PANEL: TECH / SKILLS (slides from TOP)
+     ================================================================ -->
+<div id="panel-tech" class="panel" data-from="top">
+  <div class="panel-inner">
+
+    <div class="panel-topbar">
+      <span class="panel-topbar-title">SKILL SET // TECH</span>
+      <span class="panel-topbar-sub">TOOLS &amp; ARSENALS</span>
+    </div>
+    <button class="panel-close" onclick="closePanel('tech')">
+      CLOSE <span class="close-key">ESC</span>
+    </button>
+
+    <div style="padding: 60px 80px 120px; max-width: 1400px; margin: 0 auto; position: relative;">
+      <div class="panel-section-bg-text">SKILL</div>
+
+      <div class="reveal" style="margin-bottom: 60px; position: relative; z-index: 1;">
+        <div style="font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.3em;color:var(--red);margin-bottom:14px;">03 // ARSENAL</div>
+        <div class="panel-section-title">
+          TECH<br><span class="t-outline-red">STACK</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:1;">
+
+        <!-- Languages -->
+        <div class="card reveal" style="transition-delay:0s;">
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--red);letter-spacing:0.2em;margin-bottom:20px;">// LANGUAGES</div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">C / C++</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">GO</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">RUST</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">PYTHON</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">JAVA / C#</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">CUDA / BASH</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Systems & Tools -->
+        <div class="card reveal" style="transition-delay:0.1s;">
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--red);letter-spacing:0.2em;margin-bottom:20px;">// SYSTEMS &amp; TOOLS</div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">LLVM</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">TCP/UDP STACKS</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">GIT</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">KALI LINUX</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(200,16,46,0.1);">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">CLOUDFLARE</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+            <div class="skill-row" style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.08em;">VISUAL STUDIO</span>
+              <div style="display:flex;gap:3px;">
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:var(--red);"></div>
+                <div style="width:8px;height:8px;background:rgba(200,16,46,0.2);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Concepts + Art Tools + Diagram -->
+        <div style="display:flex;flex-direction:column;gap:24px;">
+          <div class="card reveal" style="transition-delay:0.2s;">
+            <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--red);letter-spacing:0.2em;margin-bottom:16px;">// CORE DOMAINS</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <span class="tag">COMPILER DESIGN</span>
+              <span class="tag">MEMORY TRACKING</span>
+              <span class="tag">LANG SEMANTICS</span>
+              <span class="tag">NETWORK STACKS</span>
+              <span class="tag">PROTOCOL DESIGN</span>
+              <span class="tag">PERF OPTIMIZATION</span>
+              <span class="tag">PACKET SNIFFING</span>
+              <span class="tag">CRYPTOGRAPHY</span>
+              <span class="tag">WEB EXPLOITATION</span>
+              <span class="tag">DIGITAL FORENSICS</span>
+              <span class="tag">PROC ANIMATION</span>
+              <span class="tag">OSINT</span>
+            </div>
+          </div>
+
+          <!-- IMAGE SLOT: Architecture diagram -->
+          <div class="img-slot reveal" style="height:200px;transition-delay:0.3s;">
+            <div class="slot-label">ARCHITECTURE DIAGRAM</div>
+            <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);padding:0 20px;text-align:center;line-height:1.8;">
+              &lt;img src="./assets/arch-diagram.jpg"&gt;<br>
+              PseudoNet layer diagram, Helix compiler pipeline, or system sketch
+            </div>
+            <div class="slot-dim">800×400px</div>
+          </div>
+
+          <div class="card reveal" style="transition-delay:0.35s;">
+            <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--red);letter-spacing:0.2em;margin-bottom:16px;">// ART TOOLS</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <span class="tag">[ YOUR TOOLS ]</span>
+              <span class="tag">PHOTOSHOP</span>
+              <span class="tag">BLENDER</span>
+              <span class="tag">PROCREATE</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     PANEL: CONTACT (slides from BOTTOM)
+     ================================================================ -->
+<div id="panel-contact" class="panel" data-from="bottom">
+  <div class="panel-inner">
+
+    <div class="panel-topbar">
+      <span class="panel-topbar-title">CALLING CARD // CONTACT</span>
+      <span class="panel-topbar-sub">SEND MESSAGE</span>
+    </div>
+    <button class="panel-close" onclick="closePanel('contact')">
+      CLOSE <span class="close-key">ESC</span>
+    </button>
+
+    <div style="padding: 60px 80px 120px; max-width: 1400px; margin: 0 auto; position: relative;">
+      <div class="panel-section-bg-text">CONTACT</div>
+
+      <div class="reveal" style="margin-bottom:60px; position:relative; z-index:1;">
+        <div style="font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.3em;color:var(--red);margin-bottom:14px;">04 // CALLING CARD</div>
+        <div class="panel-section-title">
+          <span class="t-red">LET'S</span><br><span class="t-outline">TALK</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;position:relative;z-index:1;">
+
+        <div>
+          <p class="reveal" style="font-size:1.1rem;font-weight:300;line-height:1.9;color:rgba(232,228,213,0.8);max-width:480px;">
+            Co-founder of Helix Software Foundation. Open to systems engineering roles, research collaborations, compiler and language design work, and art commissions or exhibitions.
+            If you're building something with real technical depth — or you want to explore the boundary between machine logic and artistic expression — reach out.
+          </p>
+
+          <div class="h-rule" style="margin:40px 0;"></div>
+
+          <div class="reveal" style="display:flex;flex-direction:column;gap:20px;transition-delay:0.1s;">
+            <div style="display:flex;gap:16px;align-items:center;">
+              <div style="width:3px;height:40px;background:var(--red);flex-shrink:0;"></div>
+              <div>
+                <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--red);letter-spacing:0.2em;margin-bottom:4px;">// EMAIL</div>
+                <div style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.1em;">talgo01@pfw.edu</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:center;">
+              <div style="width:3px;height:40px;background:var(--red);flex-shrink:0;"></div>
+              <div>
+                <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--red);letter-spacing:0.2em;margin-bottom:4px;">// GITHUB</div>
+                <div style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.1em;">github.com/OjasTalgaonkar</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:center;">
+              <div style="width:3px;height:40px;background:var(--red);flex-shrink:0;"></div>
+              <div>
+                <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--red);letter-spacing:0.2em;margin-bottom:4px;">// PORTFOLIO</div>
+                <div style="font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.1em;">ojastalgaonkar.github.io</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- IMAGE SLOT: Art piece or atmospheric image used as decorative element -->
+          <div class="img-slot reveal" style="height:240px;margin-top:40px;transition-delay:0.2s;">
+            <div class="slot-label">ATMOSPHERIC ART</div>
+            <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--muted);padding:0 20px;text-align:center;line-height:1.8;">
+              One of your art pieces — cold, surreal, atmospheric.<br>
+              Let it set the tone for this section.
+            </div>
+            <div class="slot-dim">800×480px</div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="reveal" style="transition-delay:0.15s;">
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--red);letter-spacing:0.25em;margin-bottom:24px;">// SEND MESSAGE</div>
+
+          <form style="display:flex;flex-direction:column;gap:20px;" onsubmit="return false;">
+            <div>
+              <label style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);display:block;margin-bottom:8px;">NAME</label>
+              <input type="text" placeholder="YOUR NAME" style="width:100%;background:rgba(200,16,46,0.05);border:1px solid rgba(200,16,46,0.25);border-left:3px solid var(--red);color:var(--off-white);font-family:var(--font-mono);font-size:0.85rem;padding:14px 16px;outline:none;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);">
+            </div>
+            <div>
+              <label style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);display:block;margin-bottom:8px;">EMAIL</label>
+              <input type="email" placeholder="YOUR EMAIL" style="width:100%;background:rgba(200,16,46,0.05);border:1px solid rgba(200,16,46,0.25);border-left:3px solid var(--red);color:var(--off-white);font-family:var(--font-mono);font-size:0.85rem;padding:14px 16px;outline:none;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);">
+            </div>
+            <div>
+              <label style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);display:block;margin-bottom:8px;">SUBJECT</label>
+              <select style="width:100%;background:rgba(200,16,46,0.05);border:1px solid rgba(200,16,46,0.25);border-left:3px solid var(--red);color:var(--off-white);font-family:var(--font-mono);font-size:0.85rem;padding:14px 16px;outline:none;transition:all 0.2s;appearance:none;">
+                <option>SYSTEMS / ENGINEERING COLLAB</option>
+                <option>ART COMMISSION</option>
+                <option>EXHIBITION / SHOW</option>
+                <option>OTHER</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;color:var(--red);display:block;margin-bottom:8px;">MESSAGE</label>
+              <textarea rows="5" placeholder="DESCRIBE YOUR PROPOSAL..." style="width:100%;background:rgba(200,16,46,0.05);border:1px solid rgba(200,16,46,0.25);border-left:3px solid var(--red);color:var(--off-white);font-family:var(--font-mono);font-size:0.85rem;padding:14px 16px;outline:none;resize:none;transition:all 0.2s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);"></textarea>
+            </div>
+            <button type="submit" style="background:var(--red);color:var(--off-white);border:none;font-family:var(--font-display);font-size:1.1rem;letter-spacing:0.25em;padding:16px 40px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));transition:all 0.2s;align-self:flex-start;">
+              TRANSMIT ▶
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     HUB — COMMAND CENTER
+     ================================================================ -->
+<div id="hub">
+  <div class="hub-bg"></div>
+  <div class="hub-bg-grid"></div>
+  <div class="hub-diagonal"></div>
+
+  <!-- Vertical marquee -->
+  <div class="marquee-side">
+    <div class="marquee-text">
+      PERSONA// PHANTOM// SYSTEM// REBEL// CONTROL// DEPTH// FIRST PRINCIPLES// MEMORY// NETWORK// CONCURRENCY//
+      PERSONA// PHANTOM// SYSTEM// REBEL// CONTROL// DEPTH// FIRST PRINCIPLES// MEMORY// NETWORK// CONCURRENCY//
+    </div>
+  </div>
+
+  <!-- Sticker field -->
+  <div class="sticker-field">
+    <div class="sticker s1">TAKE YOUR HEART</div>
+    <div class="sticker s2">SYS // ENG</div>
+    <div class="sticker s3">FIRST PRINCIPLES</div>
+    <div class="sticker s4">ART × CODE</div>
+  </div>
+
+  <!-- Corner decorations -->
+  <div class="corner-decoration corner-tl">
+    <span class="bracket">[</span>
+    <span>PORTFOLIO</span>
+    <span>V.2024</span>
+    <span class="bracket">]</span>
+  </div>
+  <div class="corner-decoration corner-tr">
+    <span class="bracket">]</span>
+    <span>SYSTEMS ENG</span>
+    <span>× ARTIST</span>
+    <span class="bracket">[</span>
+  </div>
+  <div class="corner-decoration corner-bl">
+    <span class="bracket">[</span>
+    <span>DEPTH</span>
+    <span>PERFORMANCE</span>
+    <span>CONTROL</span>
+    <span class="bracket">]</span>
+  </div>
+  <div class="corner-decoration corner-br">
+    <span class="bracket">]</span>
+    <span>SCALE</span>
+    <span>ISOLATION</span>
+    <span>TIME</span>
+    <span class="bracket">[</span>
+  </div>
+
+  <!-- CENTER -->
+  <div class="hub-center">
+
+    <!-- HERO TEXT -->
+    <div class="hub-hero">
+      <div class="hub-date">// SYSTEMS ENGINEER X ILLUSTRATOR</div>
+      <div class="hub-name">
+        <span class="line-1">[ NAME ]</span>
+        <span class="line-2">OJAS</span>
+        <span class="line-3">TALGAONKAR</span>
+      </div>
+      <div class="hub-role">
+        LOW-LEVEL COMPUTING &amp; SYSTEMS<br>
+        MEMORY / NETWORKING / CONCURRENCY<br>
+        <span style="color:var(--red);">ART: SCALE, CHAOS, COSMIC WEIGHT</span>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <!-- DIVIDER -->
+    <div class="hub-divider"></div>
+
+    <!-- COMMAND MENU -->
+    <nav class="command-menu" role="navigation">
+
+      <button class="menu-item" onclick="openPanel('about')">
+        <span class="mi-num">01</span>
+        <span class="mi-label">ABOUT</span>
+        <span class="mi-dir">← LEFT</span>
+        <span class="mi-arrow">▶</span>
+      </button>
+
+      <button class="menu-item" onclick="openPanel('work')">
+        <span class="mi-num">02</span>
+        <span class="mi-label">WORK</span>
+        <span class="mi-dir">RIGHT →</span>
+        <span class="mi-arrow">▶</span>
+      </button>
+
+      <button class="menu-item" onclick="openPanel('tech')">
+        <span class="mi-num">03</span>
+        <span class="mi-label">TECH</span>
+        <span class="mi-dir">↑ TOP</span>
+        <span class="mi-arrow">▶</span>
+      </button>
+
+      <button class="menu-item" onclick="openPanel('contact')">
+        <span class="mi-num">04</span>
+        <span class="mi-label">CONTACT</span>
+        <span class="mi-dir">↓ BOTTOM</span>
+        <span class="mi-arrow">▶</span>
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="hub-bottom">
+    <div class="hub-bottom-left">
+      <span>© <strong>OJAS TALGAONKAR</strong></span>
+      <span id="status-text">SYSTEM: NOMINAL</span>
+    </div>
+    <div class="hub-bottom-right">
+      <span>HOVER MENU → SELECT → PANEL OPENS</span>
+      <span><strong>ESC</strong> TO RETURN</span>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
 </html>

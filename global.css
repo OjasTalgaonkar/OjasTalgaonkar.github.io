@@ -1,0 +1,201 @@
+/* ============================================================
+   GLOBAL.CSS — PERSONA 5 PORTFOLIO
+   Rebellious. Distressed. Precise.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,700;0,900;1,900&family=Share+Tech+Mono&display=swap');
+
+/* ── VARIABLES ── */
+:root {
+  --red:       #c8102e;
+  --red-dark:  #7a0a1a;
+  --red-glow:  #ff1a3a;
+  --black:     #060606;
+  --off-white: #e8e4d5;
+  --grey:      #1a1a1a;
+  --grey-mid:  #2e2e2e;
+  --muted:     rgba(232, 228, 213, 0.45);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'Barlow Condensed', sans-serif;
+  --font-mono:    'Share Tech Mono', monospace;
+
+  /* Panel slide directions */
+  --slide-about:   translateX(-100vw);
+  --slide-work:    translateX(100vw);
+  --slide-tech:    translateY(-100vh);
+  --slide-contact: translateY(100vh);
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--off-white);
+}
+body {
+  font-family: var(--font-body);
+  cursor: none;
+}
+a { text-decoration: none; color: inherit; cursor: none; }
+button {
+  cursor: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* ── CUSTOM CURSOR ── */
+.cursor-dot {
+  position: fixed;
+  width: 8px; height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s;
+}
+.cursor-ring {
+  position: fixed;
+  width: 32px; height: 32px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease, width 0.2s, height 0.2s, border-color 0.2s;
+  mix-blend-mode: difference;
+}
+.cursor-ring.hovered {
+  width: 56px; height: 56px;
+  border-color: var(--off-white);
+}
+
+/* ── NOISE OVERLAY ── */
+.noise {
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9997;
+  animation: noiseShift 0.5s steps(2) infinite;
+}
+@keyframes noiseShift {
+  0%   { background-position: 0 0; }
+  25%  { background-position: 40px -20px; }
+  50%  { background-position: -15px 30px; }
+  75%  { background-position: 20px 10px; }
+  100% { background-position: 0 0; }
+}
+
+/* ── SCANLINES ── */
+.scanlines {
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent, transparent 2px,
+    rgba(0,0,0,0.12) 2px, rgba(0,0,0,0.12) 4px
+  );
+  pointer-events: none;
+  z-index: 9996;
+}
+
+/* ── TYPOGRAPHY UTILITIES ── */
+.t-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+}
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+}
+.t-outline {
+  -webkit-text-stroke: 2px var(--off-white);
+  color: transparent;
+}
+.t-outline-red {
+  -webkit-text-stroke: 2px var(--red);
+  color: transparent;
+}
+.t-red { color: var(--red); }
+.t-muted { color: var(--muted); }
+
+/* ── DISTRESS UTILITY ── */
+.distress {
+  position: relative;
+  display: inline-block;
+}
+.distress::after {
+  content: attr(data-text);
+  position: absolute; inset: 0;
+  color: var(--red);
+  clip-path: polygon(0 30%, 100% 28%, 100% 38%, 0 40%);
+  transform: translateX(3px);
+  opacity: 0.7;
+}
+
+/* ── CLIP SHAPES ── */
+.clip-corner {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+.clip-slash {
+  clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+}
+
+/* ── RED TAPE STRIPE ── */
+.tape {
+  display: inline-block;
+  background: var(--red);
+  color: var(--black);
+  font-family: var(--font-display);
+  letter-spacing: 0.2em;
+  padding: 3px 14px;
+  transform: rotate(-1.5deg);
+  font-size: 0.75rem;
+}
+
+/* ── GLITCH TEXT ANIMATION ── */
+@keyframes glitch-1 {
+  0%, 100% { clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%); transform: translateX(-4px); }
+  50%       { clip-path: polygon(0 60%, 100% 60%, 100% 65%, 0 65%); transform: translateX(4px); }
+}
+@keyframes glitch-2 {
+  0%, 100% { clip-path: polygon(0 80%, 100% 80%, 100% 84%, 0 84%); transform: translateX(3px); }
+  50%       { clip-path: polygon(0 15%, 100% 15%, 100% 20%, 0 20%); transform: translateX(-3px); }
+}
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute; inset: 0;
+  background: var(--black);
+}
+.glitch::before {
+  color: var(--red);
+  animation: glitch-1 3s infinite linear;
+}
+.glitch::after {
+  color: #00e5ff;
+  animation: glitch-2 2.7s infinite linear;
+  animation-delay: 0.1s;
+}
+
+/* ── SCROLLBAR (for panels) ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--red); }
+::selection { background: var(--red); color: var(--off-white); }
